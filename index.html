@@ -23,20 +23,19 @@
 			}
 		</style>
     </head>
-    <body class="loading" data-spy="scroll">
+    <body class="loading" data-spy="scroll" data-target=".navbar" data-offset="100">
 	
-        <nav id= "nav" class="navbar navbar-inverse navbar-fixed-top">
+        <nav id= "nav" class="navbar navbar-inverse navbar-fixed-top"> 
 			<div class="container-fluid">
 				<div id = "logo" class ="navbar-header">
 					<a  href="#">Ingine</a>
 				</div>
-<!--onclick="$(this).scroll(3);"-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#slide-1" class="active">Home</a></li>
-					<li><a href="#slide-2" >About Me</a></li>
-					<li><a href="#slide-3" >Skills</a></li>
-					<li><a href="#slide-4" >Portfolio</a></li>
-					<li><a href="#slide-5" >Contact</a></li>
+					<li><a class="nav-link" href="#slide-1" onclick="$(this).scroll(1);" class="active">Home</a></li>
+					<li><a class="nav-link" href="#slide-2" onclick="$(this).scroll(2);">About Me</a></li>
+					<li><a class="nav-link" href="#slide-3" onclick="$(this).scroll(3);">Skills</a></li>
+					<li><a class="nav-link" href="#slide-4" onclick="$(this).scroll(4);">Portfolio</a></li>
+					<li><a class="nav-link" href="#slide-5" onclick="$(this).scroll(5);">Contact</a></li>
        			 </ul>
 			</div>
         
@@ -47,7 +46,10 @@
 	        	<div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-1">
 		        	<div class="hsContainer">
 			    		<div class="customContent bannerText" data-center="opacity: 1" data--200-top="opacity: 0" data-anchor-target="#slide-1 h3">
-				    		<h3>Hi! I'm </h3><h2>Ingine</h2><br><h3>An engineering graduate & a  freelance software developer.</h3>
+				    		<h3>Hi! I'm </h3><h2 class="author_name_white">Ingine</h2>
+							<img src="./img/profile_pic.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200">
+							<br><h3>An engineering graduate & a  freelance software developer.</h3>
+							
 				    		<p>Quality, Passion & Experience</p>
 			    		</div>
 		        	</div>
@@ -59,7 +61,7 @@
 		    	<!-- <div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-2"> -->
 			    	<div class="hsContainer">
 			    		<div class="hsContent">
-				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">About Me</h2>
+				    		<h2 class="heading" data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">About Me</h2>
 				    		<p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2" style="width : 800px">
 								Graduated from National University of Singapore with Electrical Engineering and had a considerable breadth of technical and management knowledge. Although my base field was EE, however, my bachelor thesis was focused on developing an Android Application. I have unknowingly developed a passion for modern computing technology and I am constantly learning to bridge the technology gap by freelancing software projects and by learning in my spare time. I enjoy creating products that serve a purpose, and it is my way of contributing to the betterment of society.
 							</p>
@@ -80,8 +82,8 @@
 			    		<div class="hsContent">
 			    			<div class="plaxEl" data-bottom-top="opacity: 0" data-top="opacity: 0" data--50p-top="opacity: 1; position: fixed; top: 50px; width: 100%; left: 0;" data--25p-bottom="opacity: 1;" data--50p-bottom="opacity: 0;" data-anchor-target="#slide-3">
 								<div class="row padded">
-					    		<h2>Skills & Competences</h2>
-					    		<p><span class="bgOrange">I can say I'm quite good at</span></p>
+					    		<h2 class="heading" >Skills & Competences</h2>
+					    		<p><span class="bgOrange author_name_white">I can say I'm quite good at</span></p>
 								<div class="row padded" >
 									<div class="col-xs-12 col-md-5 col-md-offset-1">
 										<div class="progress">
@@ -202,7 +204,7 @@
 		    	<div class="bcg bcg2" data-bottom-top="opacity: 0;" data--33p-top="opacity: 0;" data--66p-top="opacity: 1;" data-anchor-target="#slide-4">
 			    	<div class="hsContainer">
 				    	<div class="hsContent" data-bottom-top="opacity: 0;" data-center="opacity: 1" data-anchor-target="#slide-4">
-				    		<h2>My Portfolio</h2>
+				    		<h2 class="heading" >My Portfolio</h2>
 							<p><span>Some Recent Projects</span></p>
 
 				    		<div class="container-fluid" style="margin-top:10px;">
@@ -303,7 +305,7 @@
 				<div class="bcg4" data-0="background-color:rgb(1,27,59);" data--25p-bottom="background-color:rgb(47,78,154);" data--90p-bottom="background-color:(0,0,00);"  data-anchor-target="#slide-5">
 					<div class="hsContainer">
 						<div class="hsContent" data-100-bottom="opacity: 0;" data-bottom="opacity: 1;" >
-				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-300-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-5">Contact Me</h2>
+				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-300-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-5" class="heading" >Contact Me</h2>
 							<hr>
 							<div class="row">
 								<div class="col-lg-4 col-lg-offset-2 text-center">
@@ -325,9 +327,11 @@
 
         <!--<script src="js/jquery.min.js"></script>-->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="js/jquery.easing.min.js"></script>
         <script src="js/imagesloaded.js"></script>
         <script src="js/waypoints.min.js"></script>
         <script src="js/skrollr.js"></script>
+		<script src="js/bootstrap.min.js"></script>
         <script src="js/_main.js"></script>
 
     </body>

@@ -175,15 +175,15 @@
 				   
 				   customSlideOffset = Math.ceil((slideHeight/100) * customSlideOffset);
 				   
-				   console.log(slideHeight +' '+ customSlideOffset);
+				//    console.log(slideHeight +' '+ customSlideOffset);
 				   
 				   htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top + customSlideOffset) + 'px'},'slow');
 			        
 		        } else {
 			       
 			       var customSlideOffset = parseInt(customSlideOffset);
-			       console.log(slideHeight +' '+ customSlideOffset);
-				   console.log(slideId);
+			    //    console.log(slideHeight +' '+ customSlideOffset);
+				//    console.log(slideId);
 			       htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top + customSlideOffset) + 'px'},'slow');
 			        
 		        }
@@ -193,6 +193,14 @@
 	    
 	    
 	}
+
+
+	// Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+		selector  : '.nav-link',
+        // target: '.navbar-fixed-top',
+        offset: 80
+    })
 
 	function filterPath(string) {
     return string
@@ -213,9 +221,7 @@
         //$('html, body').animate({scrollTop: targetOffset}, 1000);
         return false;
         });
-	}
-		console.log($target);
-
+		}
     }
     });
 		
